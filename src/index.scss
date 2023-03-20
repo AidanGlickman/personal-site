@@ -1,4 +1,11 @@
 @import 'custom.scss';
+@import url("https://use.typekit.net/nom2eqq.css");
+
+:root body {
+  font-family: degular-text, sans-serif;
+  background-color: map-get($theme-colors, "dark");
+  color: map-get($theme-colors, "light");
+}
 
 .a {
   text-decoration: none;

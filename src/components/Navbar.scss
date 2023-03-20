@@ -1,1 +1,12 @@
+@import "../index.scss";
 
+#brand {
+    color: map-get($theme-colors, "light");
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}

@@ -1,0 +1,47 @@
+@import "../index.scss";
+
+.hero {
+    // The hero component. Should take up the full height of the viewport minus the navbar.
+    // Should be centered vertically and horizontally.
+    height: 90vh;
+    display: flex;
+    // should flex vertically
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.name {
+    color: map-get($theme-colors, "secondary");
+    font-size: 3rem;
+}
+
+.title {
+    color: map-get($theme-colors, "primary");
+    font-size: 2rem;
+}
+
+.socials {
+    // The socials component. Should be centered horizontally and vertically.
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    :hover {
+        color: map-get($theme-colors, "secondary");
+
+        transform: scale(1.2);
+    }
+
+    margin-top: 2rem;
+}
+
+.social {
+    font-size: 3rem;
+    color: map-get($theme-colors, "light");
+    transition: all 0.2s linear;
+
+
+}
