@@ -2,6 +2,7 @@ import "./Home.scss"
 function Home() {
     return (
         <div className="hero">
+            <img src="/assets/headshot.jpg" alt="Aidan Glickman" className="hero-image" height="30%" />
             <h1 className="name">Aidan Glickman</h1>
 
             <h2 className="title">Student, Quant, Developer</h2>
