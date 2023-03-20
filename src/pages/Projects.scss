@@ -9,13 +9,15 @@
         line-clamp: 3;
         -webkit-line-clamp: 3;
     }
+
+    .card-title {
+        line-height: 1.5rem;
+        min-height: 3rem;
+    }
 }
 
 .project-row {
     display: flex;
     justify-content: center;
-}
-
-.a {
-    color: red;
+    margin-bottom: 2rem;
 }

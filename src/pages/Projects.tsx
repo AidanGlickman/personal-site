@@ -1,5 +1,5 @@
-import { Card, Row, Col } from "react-bootstrap"
-import projects_data from "../data/projects"
+import { Card, Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap"
+import { projects, tags } from "../data/projects"
 import "./Projects.scss"
 
 function Projects() {
@@ -7,12 +7,12 @@ function Projects() {
         <div className="Projects">
             <h1>Projects</h1>
             <Row xs={1} sm={2} md={3} lg={4} className="project-row g-4">
-                {projects_data.map((project, index) => (
+                {projects.map((project, index) => (
                     <Col key={index}>
                         <Card bg="primary" className="project-card">
                             <Card.Img variant="top" src={project.image} />
                             <Card.Body>
-                                <Card.Title>
+                                <Card.Title className="card-title">
                                     {project.name}
                                     <span style={{ float: "right" }}>
                                         {project.link &&
@@ -26,7 +26,18 @@ function Projects() {
                             </Card.Body>
                             <Card.Footer>
                                 <small className="text-muted footer">
-                                    {project.tags}
+                                    {project.tags.map((tag, index) => (
+                                        <OverlayTrigger
+                                            key={index}
+                                            placement="bottom"
+                                            overlay={
+                                                <Tooltip id={`tooltip-${tag}`}>
+                                                    {tag}
+                                                </Tooltip>
+                                            }>
+                                            <span key={index} className="tag">{`${tags[tag]}\t`}</span>
+                                        </OverlayTrigger>
+                                    ))}
                                     <span style={{ float: "right" }}>
                                         {project.source &&
                                             <a href={project.source} rel="noreferrer" className="barelink">
