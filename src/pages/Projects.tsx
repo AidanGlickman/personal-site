@@ -12,13 +12,36 @@ function Projects() {
                         <Card bg="primary" className="project-card">
                             <Card.Img variant="top" src={project.image} />
                             <Card.Body>
-                                <Card.Title>{project.name}</Card.Title>
+                                <Card.Title>
+                                    {project.name}
+                                    <span style={{ float: "right" }}>
+                                        {project.link &&
+                                            <a href={project.link} rel="noreferrer" className="barelink">
+                                                <i className="fa-solid fa-link"></i>
+                                            </a>
+                                        }
+                                    </span>
+                                </Card.Title>
                                 <Card.Text className="desc">{project.description}</Card.Text>
                             </Card.Body>
                             <Card.Footer>
-                                <small className="text-muted">
+                                <small className="text-muted footer">
                                     {project.tags}
+                                    <span style={{ float: "right" }}>
+                                        {project.source &&
+                                            <a href={project.source} rel="noreferrer" className="barelink">
+                                                <i className="fa-brands fa-github"></i>
+                                            </a>
+                                        }
+                                        {project.blogpost &&
+                                            <a href={`/blog/${project.blogpost}`} rel="noreferrer" className="barelink">
+
+                                                <i className="fa-solid fa-pen-nib"></i>
+                                            </a>
+                                        }
+                                    </span>
                                 </small>
+
                             </Card.Footer>
                         </Card>
                     </Col>

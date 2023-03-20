@@ -4,7 +4,8 @@
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        min-height: 3rem;
+        min-height: 4.5rem;
+        line-height: 1.5rem;
         line-clamp: 3;
         -webkit-line-clamp: 3;
     }
@@ -13,4 +14,8 @@
 .project-row {
     display: flex;
     justify-content: center;
+}
+
+.a {
+    color: red;
 }
