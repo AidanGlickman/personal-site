@@ -7,6 +7,12 @@
   color: map-get($theme-colors, "light");
 }
 
-.a {
+a {
   text-decoration: none;
+  color: inherit;
+
+  :hover {
+    transition: 0.5s ease;
+    color: map-get($theme-colors, "secondary");
+  }
 }
