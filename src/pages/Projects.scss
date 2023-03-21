@@ -17,13 +17,10 @@
         min-height: 3rem;
     }
 
-    .card-img {
+    &:hover {
+        transform: scale(1.05);
         cursor: pointer;
         transition: ease 0.3s;
-
-        &:hover {
-            transform: scale(1.05);
-        }
     }
 }
 
