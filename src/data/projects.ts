@@ -90,6 +90,26 @@ let projects = [
         blogpost: "",
         source: "https://github.com/AidanGlickman/bankCLASP",
     },
+    {
+        name: "Packie",
+        description: "A liquor store collator that allows the user to compare prices across liquor stores.",
+        timestamp: "2023",
+        tags: ["web", "under-construction"],
+        link: "",
+        image: "/assets/projects/packie.png",
+        blogpost: "",
+        source: "https://github.com/AidanGlickman/packie",
+    },
+    {
+        name: "DALL-E Slackbot",
+        description: "A Slack bot I made while working at Viam Robotics that generates images using a hosted DALL-E instance, and can interface directly in a Slack channel.",
+        timestamp: "2022",
+        tags: ["ai"],
+        link: "https://github.com/AidanGlickman/dalle-slackbot",
+        image: "/assets/projects/dalleslack.png",
+        blogpost: "",
+        source: "https://github.com/AidanGlickman/dalle-slackbot",
+    },
 ]
 
 export {projects, tags};

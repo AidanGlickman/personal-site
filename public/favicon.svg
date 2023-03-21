@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.25 189.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #37a88e;
+      }
+
+      .cls-2 {
+        fill: #3d358b;
+      }
+
+      .cls-3 {
+        fill: #f2f9f7;
+        letter-spacing: -.03em;
+      }
+
+      .cls-4 {
+        font-family: Degular-Regular, Degular;
+        font-size: 161px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <rect class="cls-2" width="189.6" height="189.6" rx="20" ry="20"/>
+  </g>
+  <g id="Layer_1" data-name="Layer 1">
+    <text class="cls-4" transform="translate(2.46 142.29)"><tspan class="cls-3" x="0" y="0">A</tspan><tspan class="cls-1" x="87.59" y="0">G</tspan></text>
+  </g>
+</svg>
