@@ -44,7 +44,7 @@ let projects = [
         name: "Unsolve",
         description: "A game where you play Sudoku in reverse. This coupled with a tree search algorithm can be used to generate minimal Sudoku puzzles, where the minimum number of clues is given to solve the puzzle.\nBuilt with Adam Aaronson & Aakash Narayan for CS 497 @ UIUC.",
         timestamp: "2023",
-        tags: ["algorithm", "ai", "web", "under-construction"],
+        tags: ["algorithm", "web", "under-construction"],
         link: "https://unsolve.aidanglickman.com/",
         image: "/assets/projects/unkodus.png",
         blogpost: "",
