@@ -16,6 +16,9 @@ function Home() {
                 <a href="https://www.linkedin.com/in/aidanglickman/" rel="noreferrer">
                     <i className="social fa-brands fa-linkedin"></i>
                 </a>
+                <a href="https://www.youtube.com/@AidanGlickman" rel="noreferrer">
+                    <i className="social fa-brands fa-youtube"></i>
+                </a>
                 <a href="mailto:contact@aidanglickman.com" rel="noreferrer">
                     <i className="social fa-solid fa-envelope"></i>
                 </a>
