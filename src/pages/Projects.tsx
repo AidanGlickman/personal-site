@@ -63,9 +63,9 @@ function Projects() {
             <Row xs={1} sm={2} md={3} lg={4} className="project-row g-4">
                 {projects.map((project, index) => (
                     <Fragment key={index}>
-                        <Col>
-                            <Card bg="primary" className="project-card">
-                                <Card.Img variant="top" src={project.image} onClick={() => setShow(index)} />
+                        <Col className="project-card">
+                            <Card bg="primary">
+                                <Card.Img variant="top" src={project.image} className="card-img" onClick={() => setShow(index)} />
                                 <Card.Body>
                                     <Card.Title className="card-title">
                                         {project.name}

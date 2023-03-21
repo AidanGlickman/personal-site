@@ -16,6 +16,15 @@
         line-height: 1.5rem;
         min-height: 3rem;
     }
+
+    .card-img {
+        cursor: pointer;
+        transition: ease 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 }
 
 .project-row {
