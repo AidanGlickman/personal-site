@@ -21,7 +21,7 @@ let projects = [
     //     source: "",
     // },
     {
-        name: "Wikipedia Source Search",
+        name: "Wiki Source Search",
         description: "A custom Google search engine that only sources from publications with a high probability of being considered notable. Made to help Wikipedians get sources to start writing articles with.",
         timestamp: "2023-03",
         tags: ["web", "under-construction"],
@@ -32,7 +32,7 @@ let projects = [
     },
     {
         name: "Pickerel",
-        description: "A highly performant, parallelized game playing engine built in Rust. Comes with a chess implementation, but easily extensible to any 2-agent perfect information adversarial game.\nBuilt with Max Fan as a final project for CS 128 Honors @ UIUC",
+        description: "A highly performant, parallelized game playing engine built in Rust. Comes with a chess implementation, but easily extensible to any 2-agent perfect information adversarial game.\nBuilt with Max Fan as a final project for CS 128 Honors @ UIUC.",
         timestamp: "2021-12",
         tags: ["algorithm", "ai"],
         link: "",
@@ -42,7 +42,7 @@ let projects = [
     },
     {
         name: "Unsolve",
-        description: "A game where you play Sudoku in reverse. This coupled with a tree search algorithm can be used to generate minimal Sudoku puzzles, where the minimum number of clues is given to solve the puzzle.\nBuilt with Adam Aaronson \&amp; Aakash Narayan for CS 497 @ UIUC",
+        description: "A game where you play Sudoku in reverse. This coupled with a tree search algorithm can be used to generate minimal Sudoku puzzles, where the minimum number of clues is given to solve the puzzle.\nBuilt with Adam Aaronson & Aakash Narayan for CS 497 @ UIUC.",
         timestamp: "2023",
         tags: ["algorithm", "ai", "web", "under-construction"],
         link: "https://unsolve.aidanglickman.com/",

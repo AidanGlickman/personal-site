@@ -1,3 +1,5 @@
+@import "../custom.scss";
+
 .project-card {
     .desc {
         overflow: hidden;
@@ -20,4 +22,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+}
+
+.primary-modal {
+    .modal-content {
+        background-color: map-get($theme-colors, "primary") !important;
+        color: map-get($theme-colors, "light") !important;
+    }
 }
