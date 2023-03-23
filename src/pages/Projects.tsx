@@ -50,6 +50,21 @@ function ProjectFooter(props: { project: typeof projects[0] }) {
     </small >)
 }
 
+function ProjectHeader(props: { project: typeof projects[0] }) {
+    return (
+        <Fragment>
+            {props.project.name}
+            <span style={{ float: "right" }}>
+                {props.project.link &&
+                    <a href={props.project.link} rel="noreferrer" className="barelink" target="_blank">
+                        <i className="fa-solid fa-link"></i>
+                    </a>
+                }
+            </span>
+        </Fragment>
+    )
+}
+
 function Projects() {
     const [show, setShow] = useState(-1);
 
@@ -68,14 +83,7 @@ function Projects() {
                                 <Card.Img variant="top" src={project.image} className="card-img" />
                                 <Card.Body>
                                     <Card.Title className="card-title">
-                                        {project.name}
-                                        <span style={{ float: "right" }}>
-                                            {project.link &&
-                                                <a href={project.link} rel="noreferrer" className="barelink" target="_blank">
-                                                    <i className="fa-solid fa-link"></i>
-                                                </a>
-                                            }
-                                        </span>
+                                        <ProjectHeader project={project} />
                                     </Card.Title>
                                     <Card.Text className="desc">{project.description}</Card.Text>
                                 </Card.Body>
@@ -87,14 +95,7 @@ function Projects() {
                         <Modal show={show === index} onHide={handleClose} className="primary-modal">
                             <Modal.Header closeVariant="white">
                                 <Modal.Title style={{ width: "100%" }}>
-                                    {project.name}
-                                    <span style={{ float: "right" }}>
-                                        {project.link &&
-                                            <a href={project.link} rel="noreferrer" className="barelink" target="_blank">
-                                                <i className="fa-solid fa-link"></i>
-                                            </a>
-                                        }
-                                    </span>
+                                    <ProjectHeader project={project} />
                                 </Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
