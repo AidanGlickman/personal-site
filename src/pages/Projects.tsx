@@ -28,7 +28,7 @@ function ProjectFooter(props: { project: typeof projects[0] }) {
                             View source on GitHub
                         </Tooltip>
                     }>
-                    <a href={props.project.source} rel="noreferrer" className="barelink">
+                    <a href={props.project.source} rel="noreferrer" className="barelink" target="_blank">
                         <i className="fa-brands fa-github"></i>
                     </a>
                 </OverlayTrigger>
@@ -41,7 +41,7 @@ function ProjectFooter(props: { project: typeof projects[0] }) {
                             Read the writeup
                         </Tooltip>
                     }>
-                    <a href={`/blog/${props.project.blogpost}`} rel="noreferrer" className="barelink">
+                    <a href={`/blog/${props.project.blogpost}`} rel="noreferrer" className="barelink" target="_blank">
                         <i className="fa-solid fa-pen-nib"></i>
                     </a>
                 </OverlayTrigger>
@@ -71,7 +71,7 @@ function Projects() {
                                         {project.name}
                                         <span style={{ float: "right" }}>
                                             {project.link &&
-                                                <a href={project.link} rel="noreferrer" className="barelink">
+                                                <a href={project.link} rel="noreferrer" className="barelink" target="_blank">
                                                     <i className="fa-solid fa-link"></i>
                                                 </a>
                                             }
@@ -90,7 +90,7 @@ function Projects() {
                                     {project.name}
                                     <span style={{ float: "right" }}>
                                         {project.link &&
-                                            <a href={project.link} rel="noreferrer" className="barelink">
+                                            <a href={project.link} rel="noreferrer" className="barelink" target="_blank">
                                                 <i className="fa-solid fa-link"></i>
                                             </a>
                                         }
