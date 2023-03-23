@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "../index.scss";
 
 .hero {
@@ -18,7 +19,7 @@
 }
 
 .title {
-    color: map-get($theme-colors, "primary");
+    color: color.adjust(map-get($theme-colors, "primary"), $lightness: 20%);
     font-size: 2rem;
 }
 
