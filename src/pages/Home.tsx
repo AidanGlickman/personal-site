@@ -5,7 +5,9 @@ function Home() {
             <img src="/assets/headshot.jpg" alt="Aidan Glickman" className="hero-image" height="30%" />
             <h1 className="name">Aidan Glickman</h1>
 
-            <h2 className="title">Student, Quant, Developer</h2>
+            <h2 className="title">
+                UIUC CS Speedrunner, Coffee Nerd, Former Child
+            </h2>
             <div className="socials">
                 <a href="https://github.com/AidanGlickman" rel="noreferrer">
                     <i className="social fa-brands fa-github"></i>
