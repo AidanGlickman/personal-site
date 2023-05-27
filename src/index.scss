@@ -5,6 +5,11 @@
   font-family: degular-text, sans-serif;
   background-color: map-get($theme-colors, "dark");
   color: map-get($theme-colors, "light");
+
+  // add a scroll margin to account for the fixed header
+  * {
+    scroll-margin-top: 75px;
+  }
 }
 
 a {

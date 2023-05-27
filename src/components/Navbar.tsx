@@ -21,7 +21,7 @@ function MyNavbar() {
               <Nav.Link as={Link} to="/projects" onClick={() => setExpanded(false)}>Projects</Nav.Link>
             </NavItem>
             <NavItem>
-              <Nav.Link as={Link} to="/blog" onClick={() => setExpanded(false)} disabled>Blog</Nav.Link>
+              <Nav.Link as={Link} to="/blog" onClick={() => setExpanded(false)}>Blog</Nav.Link>
             </NavItem>
           </Nav>
         </Navbar.Collapse>
