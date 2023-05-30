@@ -19,26 +19,26 @@ Too often in life, we choose to hold onto things simply because they are there, 
 - "Is the seven in spot r2c3 really necessary?" (hmm...[^1])
 <img src={puz1}/>
 
-And while Ms. Kondo may have wavered in her dedication to tidying[^2], I don't think that is any reason not to apply her teachings to logic puzzles. In an effort to just that, we introduce [unsolve](https://unsolve.aidanglickman.com/), a game which taxes you with trying to "tidy up" a sudoku as much as possible while keeping the solution unique.
+And while Ms. Kondo may have wavered in her dedication to tidying[^2], I don't think that is any reason not to apply her teachings to logic puzzles. In an effort to do just that, we introduce [unsolve](https://unsolve.aidanglickman.com/), a game which taxes you with trying to "tidy up" a sudoku as much as possible while keeping the solution unique.
 
 ## The Mathematics of Sudoku[^3]
-When Sudoku rose to global popularity in the early 2000s, there was a (relatively shortlived) pop-science obsession with some of the mathematical features of the Japanese puzzle. The two most researched questions in the field were "How many filled Sudoku grids are there?[^4]" and "What is the lowest number of clues necessary to form a valid puzzle?[^5]"[^6]. While these questions are interesting big picture takes on the puzzle, they don't give us too much insight on patterns in individual puzzles.
+When Sudoku rose to global popularity in the early 2000s, there was a (relatively shortlived) pop-science obsession with some of the mathematical features of the Japanese game. The two most researched questions in the field were "How many filled Sudoku grids are there?[^4]" and "What is the lowest number of clues necessary to form a valid puzzle?[^5]"[^6]. While these questions are interesting big picture takes on the game, they don't give us too much insight on patterns in individual puzzles.
 
 To remedy this, we present the question "what is the smallest minimal form of a given Sudoku?" That is, what is the smallest number of clues for a given grid that result in a unique solution? If we can find such a solution for any given puzzle, we can actually automate the generation of relatively hard puzzles, since writing out filled grids is already pretty easy.
 
 ## The (General) Solution
-While everything that we have discussed so far applies only to Sudoku, we wanted our solution to generalize a bit more than that. In fact, the backend of Unsolve can easily be extended to work for any puzzle that can be modeled as a constraint satisfaction problem in Z3[^7].
+While everything that we have discussed so far applies only to Sudoku, we wanted our solution to generalize a bit more than that. In fact, the backend of Unsolve can easily be extended to work for any game that can be modeled as a constraint satisfaction problem in Z3[^7].
 
 Any puzzle can be coded using two separate groups of constraints; One set encodes the rules of the game[^8], and one that encodes the restrictions that make up the actual puzzle[^9]. When it comes to trying to minimize a puzzle, we really just want to remove as many constraints from the second set while keeping the solution unique.
 
-To accomplish this in the general case, there really is no option except to do a massive brute force search[^10]. This is obviously not feasible for lots of types of puzzles, since there can be a huge number of possible sets of clues[^11], so, what do we do?
+To accomplish this in the general case, there really is no option except to do a massive brute force search[^10]. This is obviously not feasible for lots of types of games, since there can be a huge number of possible sets of clues[^11], so, what do we do?
 
 ## The (Unsolve) Solution
-For the purposes of this project, we put general puzzles on the back-burner, and switched our focus to Sudoku specifically. While we have determined that *globally* minimizing Sudoku puzzles is rather difficult, finding an arbitrary number of local minima is not very difficult. One such strategy to do this could be to pick 17 random clues to fix (since we know there are no unique puzzles with fewer) and incrementally add clues until we get to a unique puzzle. 
+For the purposes of this project, we put general games on the back-burner, and switched our focus to Sudoku specifically. While we have determined that *globally* minimizing Sudoku puzzles is rather difficult, finding an arbitrary number of local minima is not very hard. One such strategy to do this could be to pick 17 random clues to fix (since we know there are no unique puzzles with fewer) and incrementally add clues until we get to a unique puzzle. 
 
 
 ### Unavoidable Sets
-We can then combine this with an interesting feature of Sudoku puzzles, the existence of unavoidable sets. Unavoidable sets are sets of cells within a puzzle where at least one of the cell values *must* be given for a puzzle to be unique.
+We can combine this strategy with an interesting feature of Sudoku puzzles, namely the existence of unavoidable sets. Unavoidable sets are sets of cells within a puzzle where at least one of the cell values *must* be given for a puzzle to be unique.
 
 Consider this example from [Sudopedia](https://www.sudopedia.org/wiki/Unavoidable_Set):
 <img src={unavoidable}/>
@@ -47,7 +47,7 @@ If none of the six given cells were filled, then the puzzle could not be unique,
 There are many different patterns of unavoidable sets, and enumerating some of these sets was a crucial strategy used in the paper that confirmed that there are no 16 clue Sudokus[^12]. By using members of these unavoidable sets as members of our initial random sets, we have a higher probability of finding viable solutions with fewer clues, since we know that at least one of these clues must be included. This strategy made up the original puzzle set used for Unsolve, and can easily be used to generate pretty good™️ Sudokus.
 
 ## The Game
-Now that we have set up just how hard this task is (even for a computer!) Why not jump right in and try your hand at it? My friends [Adam Aaronson](https://aaronson.org)[^13] and Aakash Narayan[^14] and I, under the supervision of [Professor Ben Cosman](https://cs.illinois.edu/about/people/department-faculty/bcosman) turned this ridiculous task into a little web game. Simply put in a seed (any number will do), hit generate puzzle, and tidy away! The game ends when your solution is no longer unique.
+Now that we have set up just how hard this task is (even for a computer!) Why not jump right in and try your hand at it? My friends [Adam Aaronson](https://aaronson.org)[^13] and Aakash Narayan[^14] and I, under the supervision of [Professor Ben Cosman](https://cs.illinois.edu/about/people/department-faculty/bcosman) turned this ridiculous task into a little web toy. Simply put in a seed (any number will do), hit generate puzzle, and tidy away! The game ends when your solution is no longer unique.
 
 ### The Reveal Button
 One inclusion that may seem interesting based on the computational challenges listed above, is the reveal button which we guarantee always provides a perfectly optimal solution to a given problem. How did we accomplish this task? By cheating, of course! Since minimizing Sudokus is hard but solving them is easy, we simply used a [list of known 17-clue puzzles](https://web.archive.org/web/20120722180233/http://mapleta.maths.uwa.edu.au/~gordon/sudokumin.php), solve them in bulk to generate our starting puzzles, then randomly permute the symbols to make them look more unique[^15].
