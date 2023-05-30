@@ -1,0 +1,11 @@
+@import '../custom.scss';
+
+.blogpost img {
+    width: 100%;
+}
+
+.blogpost a,
+.blogpost a:hover {
+    color: map-get($theme-colors, "secondary");
+    text-decoration: none;
+}
