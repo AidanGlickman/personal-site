@@ -1,7 +1,21 @@
 @import '../custom.scss';
 
-.blogpost img {
+.blogpost {
     width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+        width: 60%;
+    }
+}
+
+.blogpost img {
+    max-width: 100%;
+    max-height: 50vh;
+    // center
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .blogpost a,
