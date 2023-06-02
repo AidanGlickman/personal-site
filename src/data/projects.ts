@@ -1,4 +1,4 @@
-let tags: {[name: string]: string} = {
+let tags: { [name: string]: string } = {
     "web": "🌐",
     "mobile": "📱",
     "under-construction": "🚧",
@@ -44,10 +44,10 @@ let projects = [
         name: "Unsolve",
         description: "A game where you play Sudoku in reverse. This coupled with a tree search algorithm can be used to generate minimal Sudoku puzzles, where the minimum number of clues is given to solve the puzzle.\nBuilt with Adam Aaronson & Aakash Narayan for CS 497 @ UIUC.",
         timestamp: "2023",
-        tags: ["algorithm", "web", "under-construction"],
+        tags: ["algorithm", "web"],
         link: "https://unsolve.aidanglickman.com/",
         image: "/assets/projects/unkodus.png",
-        blogpost: "",
+        blogpost: "unsolve",
         source: "https://github.com/AidanGlickman/unsolve",
     },
     {
@@ -112,4 +112,4 @@ let projects = [
     },
 ]
 
-export {projects, tags};
+export { projects, tags };

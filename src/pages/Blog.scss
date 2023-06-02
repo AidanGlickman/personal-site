@@ -1,0 +1,33 @@
+@import "../custom.scss";
+
+.blog-card {
+    .desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        min-height: 4.5rem;
+        line-height: 1.5rem;
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+        color: map-get($theme-colors, "light") !important;
+    }
+
+    .card-title {
+        color: map-get($theme-colors, "light") !important;
+        line-height: 1.5rem;
+        min-height: 3rem;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        transition: ease 0.3s;
+    }
+}
+
+.blog-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
